@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="./assets/img/A-64.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" />
+        </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" aria-current="page" [routerLink]="['/home']">Home</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" aria-current="page" [routerLink]="['/heroes']">Heroes</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" aria-current="page" [routerLink]="['/about']">About</a>
+                </li>
+            </ul>
+
+            <!--  The "onsubmit" attribute is set to "return false" to prevent the form from being submitted. -->
+            <form class="d-flex" onsubmit="return false">
+                <input #buscarHeroe class="form-control me-2" type="text" placeholder="Buscar heroe"  (keyup.enter)="buscar(buscarHeroe.value)" aria-label="Buscar" />
+                <button class="btn btn-outline-primary" type="button" (click)="buscar(buscarHeroe.value)">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>

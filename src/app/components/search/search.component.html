@@ -1,0 +1,8 @@
+<h1>Buscador <small>{{termino}}</small></h1>
+<hr>
+
+@if (auxheroes.length > 0) {
+    <app-search-results [auxheroes]="auxheroes" />
+} @else if (auxheroes.length == 0) {
+    <app-not-found-results [termino]="termino" />
+}
