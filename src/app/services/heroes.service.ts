@@ -89,7 +89,7 @@ export class HeroesService {
     termino = termino.toLowerCase();
     this.heroes.filter((heroe, i) => {
       if (heroe.nombre.toLowerCase().includes(termino)) {
-        console.log({ i, heroe });
+        // console.log({ i, heroe });
         heroe.idx = i;
         heroesArr.push(heroe);
       }
